@@ -1,25 +1,19 @@
 import webbrowser
 import os
-#import time
 
-new = 2
+f = open("data.csv", 'r')
+data = f.readlines()
+lines = len(data)
+for line in range(0, lines):
+    line = data[line].split(',')
+    amazon_link = line[1]
 
-url = "http://www.amazon.com/NFL-Seattle-Seahawks-Pillow-Pet/dp/B004V55SDE/ref \
-    =sr_1_1?ie=UTF8&qid=1450967484&sr=8-1&keywords=nfl+pillow+pet+seattle+seahawks"
+    new = 2
 
-webbrowser.open(url, new=new)
+    url = amazon_link
 
-#time.sleep(10.0)
-os.system('pause')
+    webbrowser.open(url, new=new)
 
-
-url = "http://www.amazon.com/NFL-Denver-Broncos-Pillow-Pet/dp/B004V4Z3XU/ref \
-    =sr_1_1?ie=UTF8&qid=1450967811&sr=8-1&keywords=nfl+pillow+pet+denver+broncos"
-
-webbrowser.open(url, new=new)
-
-os.system('pause')
-
-
+    os.system('pause')
 
 
